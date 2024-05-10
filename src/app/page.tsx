@@ -82,12 +82,8 @@ export default function Home() {
 			<section className="bg-slate-100 grainy-dark py-24">
 				<MaxWidthWrapper className="flex flex-col items-center gap-16 sm:gap-32">
 					<div className="flex flex-col lg:flex-row items-center gap-4 sm:gap-6">
-						<h2 className="order-1 mt-2 tracking-tight text-center text-balance !leading-tight font-bold text-5xl md:text-6xl text-gray-900">
-							Ce que nos{" "}
-							<span className="relative px-2">
-								clients <Icons.underline className="hidden sm:block pointer-events-none absolute inset-x-0 -bottom-6 text-purple-500" />
-							</span>{" "}
-							disent
+						<h2 className="order-1 mt-2 tracking-tight text-center text-balance !leading-tight font-bold text-5xl md:text-6xl text-gray-900 underline underline-offset-8 decoration-[4px] decoration-dashed decoration-purple-600">
+							Ce que nos clients disent
 						</h2>
 						<img src="/pandacase_thank-you.svg" className="w-24 order-0 lg:order-2" />
 					</div>

@@ -14,7 +14,7 @@ export async function POST(req: Request) {
 		const signature = headers().get("stripe-signature");
 
 		if (!signature) {
-			return new Response("Invalid signature", { status: 400 });
+			return new Response("Signature invalide", { status: 400 });
 		}
 
 		const event = stripe.webhooks.constructEvent(body, signature, process.env.STRIPE_WEBHOOK_SECRET!);
@@ -32,7 +32,7 @@ export async function POST(req: Request) {
 			};
 
 			if (!userId || !orderId) {
-				throw new Error("Invalid request metadata");
+				throw new Error("Metadata de requête invalide");
 			}
 
 			const billingAddress = session.customer_details!.address;
