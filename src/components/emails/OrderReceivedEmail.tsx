@@ -2,7 +2,7 @@ import { ShippingAddress } from "@prisma/client";
 import { Body, Column, Container, Head, Heading, Hr, Html, Img, Preview, Row, Section, Text } from "@react-email/components";
 
 const OrderReceivedEmail = ({ shippingAddress, orderId, orderDate }: { shippingAddress: ShippingAddress; orderId: string; orderDate: string }) => {
-	const baseUrl = process.env.NODE_ENV === "development" ? "http://localhost:3000" : "https://pandacase.vercel.app";
+	const baseUrl = process.env.NODE_ENV === "development" ? "http://localhost:3000" : "https://panda-case.vercel.com";
 
 	return (
 		<Html>
@@ -11,7 +11,7 @@ const OrderReceivedEmail = ({ shippingAddress, orderId, orderDate }: { shippingA
 			<Body style={main}>
 				<Container style={container}>
 					<Section style={message}>
-						<Img src={`${baseUrl}/snake-3.png`} width="65" height="73" alt="delivery snake" style={{ margin: "auto" }} />
+						<Img src={`${baseUrl}/pandacase_thank-you.svg`} width="65" height="73" alt="delivery panda" style={{ margin: "auto" }} />
 						<Heading style={global.heading}>Merci pour votre commande !</Heading>
 						<Text style={global.text}>
 							Nous préparons le tout pour la livraison et nous vous informerons dès que votre colis aura été expédié. La livraison prend généralement 2 jours.
