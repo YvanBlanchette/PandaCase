@@ -2,7 +2,7 @@ import { ShippingAddress } from "@prisma/client";
 import { Body, Column, Container, Head, Heading, Hr, Html, Img, Preview, Row, Section, Text } from "@react-email/components";
 
 const OrderReceivedEmail = ({ shippingAddress, orderId, orderDate }: { shippingAddress: ShippingAddress; orderId: string; orderDate: string }) => {
-	const baseUrl = process.env.NODE_ENV === "development" ? "http://localhost:3000" : "https://panda-case.vercel.com";
+	const baseUrl = process.env.NODE_ENV === "development" ? "http://localhost:3000" : "https://panda-case.vercel.app";
 
 	return (
 		<Html>
