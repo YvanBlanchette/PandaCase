@@ -1,19 +1,17 @@
 // bg-blue-950 border-blue-950
 // bg-zinc-900 border-zinc-900
-// bg-red-900 border-red-900
-// bg-green-900 border-green-900
+// bg-rose-950 border-rose-950
 
 import { PRODUCT_PRICES } from "@/config/products";
 
 export const COLORS = [
-	{ label: "Carbon Black", value: "black", tw: "zinc-900" },
+	{ label: "Noir", value: "black", tw: "zinc-900" },
 	{
-		label: "Cobalt Blue",
+		label: "Bleu",
 		value: "blue",
 		tw: "blue-950",
 	},
-	{ label: "Dark Red", value: "red", tw: "red-900" },
-	{ label: "Forest Green", value: "green", tw: "green-900" },
+	{ label: "Rouge", value: "rose", tw: "rose-950" },
 ] as const;
 
 export const MODELS = {
@@ -47,7 +45,7 @@ export const MODELS = {
 } as const;
 
 export const MATERIALS = {
-	name: "materials",
+	name: "matériaux",
 	options: [
 		{
 			label: "Silicone",
@@ -56,28 +54,28 @@ export const MATERIALS = {
 			price: PRODUCT_PRICES.material.silicone,
 		},
 		{
-			label: "Soft Polycarbonate",
+			label: "Polycarbonate",
 			value: "polycarbonate",
-			description: "Scratch-resistant coating",
+			description: "Résistant aux égratignures",
 			price: PRODUCT_PRICES.material.polycarbonate,
 		},
 	],
-};
+} as const;
 
-export const FINISH = {
-	name: "finish",
+export const FINISHES = {
+	name: "finitions",
 	options: [
 		{
-			label: "Smooth",
+			label: "Fini lustré",
 			value: "smooth",
 			description: undefined,
 			price: PRODUCT_PRICES.finish.smooth,
 		},
 		{
-			label: "Textured Finish",
+			label: "Fini texturé",
 			value: "textured",
-			description: "Soft grippy texture",
+			description: "Texture antidérapante",
 			price: PRODUCT_PRICES.finish.textured,
 		},
 	],
-};
+} as const;
